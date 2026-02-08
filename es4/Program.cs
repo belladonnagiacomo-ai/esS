@@ -14,6 +14,7 @@
 
                     f[i] = ' ';
                 }
+                Console.Write(f[i]);
             }
                
             
@@ -22,7 +23,7 @@
         {
             Console.WriteLine("Dammi una frase");
             string frase = Console.ReadLine();
-
+            Cancellazione (frase);
         }
     }
 }

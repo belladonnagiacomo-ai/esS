@@ -1,29 +1,28 @@
-﻿namespace es3
+﻿namespace es4
 {
     internal class Program
     {
-        static char[] Conversione(string frase)
+        static void Cancellazione(string frase)
         {
             frase = frase.ToLower();
             char[] f = frase.ToCharArray();
-            for (int i = 0; i < f.Length; i++)
+            for (int i = 0; i < frase.Length; i++)
             {
-                if (i == 0 || f[i - 1] == ' ')
+               
+                if (f[i] == 'a' || f[i] == 'e' || f[i] == 'i' || f[i] == 'o' || f[i] == 'u')
                 {
 
-                    f[i] = char.ToUpper(f[i]);
-
-
+                    f[i] = ' ';
                 }
-                Console.Write(f[i]);
             }
-            return f;
+               
+            
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Dammi una frase");
             string frase = Console.ReadLine();
-            Conversione(frase);
+
         }
     }
 }
